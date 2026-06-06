@@ -156,6 +156,7 @@ jobs:
               run: node ./scripts/ppworker.cjs
 
             - name: Build Electron App
+              shell: bash
               run: npx electron-builder ${{ matrix.electron_target }} ${{ matrix.build_args }} --publish never
 
             - name: Rename files
